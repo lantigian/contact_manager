@@ -1,9 +1,9 @@
 <?php
 
-$full_name = $_GET['full_name'];
-$age = $_GET['age'];
-$phone_number = $_GET ['phone_number']; 
-$email = $_GET['email'];
+$full_name = $_POST['full_name'];
+$age = $_POST['age'];
+$phone_number = $_POST ['phone_number']; 
+$email = $_POST['email'];
 
 $servername = 'localhost';
 $username = 'root';

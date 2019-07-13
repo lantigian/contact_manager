@@ -5,7 +5,7 @@
 
 <title> Assignment Zero </title>
 <h1> NEW CONTACT </h1>
-<form action= "create_contact.php" method = "GET">
+<form action= "create_contact.php" method = "POST">
 	full_name: <br>
 	<input type = 'text' name='full_name' placeholder="Mickey Rat"><br>
 	age: <br>

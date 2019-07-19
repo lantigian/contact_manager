@@ -11,6 +11,10 @@ $contact_id = $_POST['contact_id'];
 #Creating a connection
 include ("db.php");
 
+$contact_id = $_GET['contact_id'];
+
+header ('Location:http://localhost/contact_manager/show_contact.php?contact_id='.$contact_id );
+
 
 $sql = "INSERT INTO `contacts` (`full_name`, `age`, `phone_number`, `email`) VALUES ('$full_name', '$age', '$phone_number', '$email')";
 echo $sql."\n";

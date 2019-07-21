@@ -1,20 +1,15 @@
 <?php
 
+
+
+//////////////////////////////////
 $full_name = $_POST['full_name'];
 $age = $_POST['age'];
 $phone_number = $_POST ['phone_number']; 
 $email = $_POST['email'];
-$contact_id = $_POST['contact_id'];
-
-
 
 #Creating a connection
 include ("db.php");
-
-$contact_id = $_GET['contact_id'];
-
-header ('Location:http://localhost/contact_manager/show_contact.php?contact_id='.$contact_id );
-
 
 $sql = "INSERT INTO `contacts` (`full_name`, `age`, `phone_number`, `email`) VALUES ('$full_name', '$age', '$phone_number', '$email')";
 echo $sql."\n";
@@ -24,14 +19,17 @@ if ($conn->query($sql) === TRUE) {
 	echo "contact was not created: " . $sql . "<br>" . $conn->error;
 }
 //////////////////////////
+
+
+//Getting the contact_id from the newly created contact
 $sql = "SELECT * FROM `contacts` WHERE `full_name`= '$full_name' ORDER BY `id` DESC limit 1" ;
 
 $result = mysqli_query ($conn, $sql) or die ("Bad Query: $sql");
-while ($show = mysqli_fetch_assoc ($result))
+while ($row = mysqli_fetch_assoc ($result))
 
 {
-	$contact_id = $show['id'];
-
+	$contact_id = $row['id'];//Inside a loop you assigned the returned information 
+//you are returning $row['id'] and you are assigning it to $contact_id
 }
 
 ?>
@@ -69,10 +67,7 @@ while ($show = mysqli_fetch_assoc ($result))
 
 <title> Create a Contact </title>
 
-<?php /// create a buttom that would take/route you to the newly created contact show page ?> 
-<a href="http://localhost/contact_manager/show_contact.php?contact_id=<?php echo $contact_id; ?>" class="button"> Here is your newly created contact: </a>
-
-
+<?php header ("Location:http://localhost/contact_manager/show_contact.php?contact_id=".$contact_id ); ?> 
 
 </body>
 <html>

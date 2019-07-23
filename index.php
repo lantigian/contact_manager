@@ -23,7 +23,7 @@ $email = $row ['email'];
 //desired column of a contact. So now we have the variable+desired location that we want to focus our scope towards. We get to specify as well as have a purpose for such data point.
 
 
-echo "<tr><td>$contact_id </td><td>$full_name </td><td>$age</td><td>$phone_number</td><td>$email</td><td> <a href='show.php?contact_id=$contact_id' >show </a> <a href='edit.php?contact_id=$contact_id' >edit </a> <td> <a href='delete.php?contact_id=$contact_id' >delete </a> </td></tr>"; 
+echo "<tr><td>$contact_id </td><td>$full_name </td><td>$age</td><td>$phone_number</td><td>$email</td><td> <a href='show.php?contact_id=$contact_id' >show </a> <a href='edit.php?contact_id=$contact_id' >edit </a> <a href='delete.php?contact_id=$contact_id' >delete </a> </td></tr>"; 
 }
 echo "<table>";
 
@@ -36,8 +36,7 @@ echo "<table>";
 
 <html>
 <head>
-
-</head>
+ 
 <body>
 
 <a href="http://localhost/contact_manager/new.php" class="button"> -------------------------------------------create new-------------------------------------------- </a>

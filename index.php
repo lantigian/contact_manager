@@ -10,7 +10,7 @@ $result = mysqli_query($conn, $sql) or die ('Bad Query: $sql');
 
 //note to self order matters! use caution before proceding & placing the returned data to the desired variable! The data with the following information should be seaminlessly on the screen as localhost/contact_manager/ is accessed.
 echo "<table class='table'>";
-echo "<tr><td> id </td><td> Full Name </td><td> Age </td><td> Phone Number </td><td> email </td><td> actions </td></tr>\n"; 
+echo "<tr><td> id </td><td> Full Name </td><td> Age </td><td> Phone Number </td><td> Email </td><td> Actions </td></tr>\n"; 
 
 while ($row = mysqli_fetch_assoc ($result)) 
 {
@@ -23,7 +23,7 @@ $email = $row ['email'];
 //desired column of a contact. So now we have the variable+desired location that we want to focus our scope towards. We get to specify as well as have a purpose for such data point.
 
 
-echo "<tr><td>$contact_id </td><td>$full_name </td><td>$age</td><td>$phone_number</td><td>$email</td><td> <a href='show.php?contact_id=$contact_id' >show </a> </td><td> <a href='edit.php?contact_id=$contact_id' >edit </a> </td><td> <a href='delete.php?contact_id=$contact_id' >delete </a> </td></tr>"; 
+echo "<tr><td>$contact_id </td><td>$full_name </td><td>$age</td><td>$phone_number</td><td>$email</td><td> <a href='show.php?contact_id=$contact_id' >show </a> <a href='edit.php?contact_id=$contact_id' >edit </a> <td> <a href='delete.php?contact_id=$contact_id' >delete </a> </td></tr>"; 
 }
 echo "<table>";
 
@@ -31,9 +31,6 @@ echo "<table>";
 
 
 ?> 
-
-
-
 
 <!DOCTYPE HTML>
 

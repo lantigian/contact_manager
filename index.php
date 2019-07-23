@@ -19,14 +19,18 @@ $full_name = $row ['full_name'];
 $age = $row ['age'];
 $phone_number = $row ['phone_number'];
 $email = $row ['email'];
+// the above is important because like mentioned before the variables hold the returned data from $result. More specifically the $row information of the 
+//desired column of a contact. So now we have the variable+desired location that we want to focus our scope towards. We get to specify as well as have a purpose for such data point.
+
 
 echo "<tr><td>{$row['id']} </td><td>{$row['full_name']} </td><td>{$row['age']}</td><td>{$row['phone_number']}</td><td>{$row['email']}</td><td> <a href='show.php?contact_id=$contact_id' >show </a> </td><td> <a href='edit.php?contact_id=$contact_id' >edit__ </a> </td><td> <a href='delete.php?contact_id=$contact_id' >delete </a> </td></tr>"; 
 }
 echo "<table>";
 
-//if header ("Location:http://localhost/contact_manager/new.php?contact_id=".$contact_id ); ?> 
+//The table is generated. The table allows for the backend to communicate with the front end and allow for what has been accomplished. By utilizing HTML I was able to bring contact information forward from the database not available to the public eye. The person who executes this code is able to see what the database holds. This allows for viewing as well as modifications as desired.
 
 
+?> 
 
 
 
@@ -34,6 +38,9 @@ echo "<table>";
 <!DOCTYPE HTML>
 
 <html>
+<head>
+
+</head>
 <body>
 
 <a href="http://localhost/contact_manager/new.php" class="button"> -------------------------------------------create new-------------------------------------------- </a>

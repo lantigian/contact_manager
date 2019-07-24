@@ -1,3 +1,7 @@
+<html>
+
+<?php include ('header.php'); ?>
+<body>
 <?php 
 
 $contact_id = $_GET['contact_id'];
@@ -28,23 +32,7 @@ while ($row = mysqli_fetch_assoc ($result))
 $conn->close();
 
 ?>
-<html>
-<head>
- <style>
-         .button {
-         background-color: #1c87c9;
-         border: none;
-         color: white;
-         padding: 20px 34px;
-         text-align: center;
-         text-decoration: none;
-         display: inline-block;
-         font-size: 20px;
-         margin: 4px 2px;
-         cursor: pointer;
-         }
-      </style>
-	</head>
+
 	<body>
 
 		<br>
@@ -62,14 +50,28 @@ $conn->close();
 <title> Create a Contact </title>
 
      
-  
-  
-      <a href="http://localhost/contact_manager/new_contact.php" class="button">Create a contact here: </a>
+      <a href="http://localhost/contact_manager/new.php" class="button">Create a contact here: </a>
 
-<a href="http://localhost/contact_manager/show_contact.php?contact_id=" class="button">Create a contact here: </a>
+<a href="http://localhost/contact_manager/show.php?contact_id=" class="button">Create a contact here: </a>
 
 
 </body>
+
+ <style>
+         .button {
+         background-color: #1c87c9;
+         border: none;
+         color: white;
+         padding: 10px 25px;
+         text-align: center;
+         text-decoration: none;
+         display: inline-block;
+         font-size: 12px;
+         margin: 4px 2px;
+         cursor: pointer;
+         }
+      </style>
+
 <html>
 
 

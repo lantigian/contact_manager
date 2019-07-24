@@ -4,7 +4,7 @@
 <?php include ('header.php'); ?>
 
 <body>
-<button type="button" class="btn btn-outline-primary"> <a href='http://localhost/contact_manager/new.php' > -add a new contact by clicking here- </a></button>
+<button type="button" class="btn btn-outline"> <a href='http://localhost/contact_manager/new.php' > -add a new contact by clicking here- </a></button>
 
 <?php
 //Where we will obtaining all the fields we require will come from an established connection to the database of where we hold such records not publicluy available.
@@ -46,20 +46,85 @@ echo "<tr>
 <td>$age</td>
 <td>$phone_number</td>
 <td>$email</td>
-<td><button class='btn btn-outline-primary'><a href='show.php?contact_id=$contact_id' >show </a> </button>
-<button class='btn btn-outline-primary'><a href='edit.php?contact_id=$contact_id' >edit </a></button>
-<button class='btn btn-outline-primary'><a href='delete.php?contact_id=$contact_id' >delete </a></button>
+<td>
+<button class='btn info'><a href='show.php?contact_id=$contact_id' >show </a> </button>
+<button class='btn success'><a href='edit.php?contact_id=$contact_id' >edit </a></button>
+<button class='btn danger'><a href='delete.php?contact_id=$contact_id' >delete </a></button>
+</td>
 </tr>"; 
 }
 echo "</table>";
 
 //The table is generated. The table allows for the backend to communicate with the front end and allow for what has been accomplished. By utilizing HTML I was able to bring contact information forward from the database not available to the public eye. The person who executes this code is able to see what the database holds. This allows for viewing as well as modifications as desired.
 
-
 ?> 
 
-
 </body>
+
+  <style>
+table {
+  border-collapse: collapse;
+  width: 100%;
+}
+th, td {
+  text-align: left;
+  padding: 8px;
+}
+tr:nth-child(even) {background-color: #C0C0C0;}
+}
+.btn {
+  border: 2px solid black;
+  background-color: white;
+  color: black;
+  padding: 14px 28px;
+  font-size: 16px;
+  cursor: pointer;
+}
+/* Green */
+.success {
+  border-color: #4CAF50;
+  color: green;
+}
+.success:hover {
+  background-color: #4CAF50;
+  color: white;
+}
+/* Blue */
+.info {
+  border-color: #2196F3;
+  color: dodgerblue
+}
+.info:hover {
+  background: #2196F3;
+  color: white;
+}
+/* Orange */
+.warning {
+  border-color: #ff9800;
+  color: orange;
+}
+.warning:hover {
+  background: #ff9800;
+  color: white;
+}
+/* Red */
+.danger {
+  border-color: #f44336;
+  color: red
+}
+.danger:hover {
+  background: #f44336;
+  color: white;
+}
+/* Gray */
+.default {
+  border-color: #e7e7e7;
+  color: black;
+}
+.default:hover {
+  background: #e7e7e7;
+}
+</style>
 
 </html>
 

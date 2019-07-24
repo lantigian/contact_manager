@@ -1,35 +1,54 @@
-<!DOCTYPE HTML>
+<!DOCTYPE html>
+<html>
+<head>
 
-<html lang="en">
+<?php include ('header.php') ?>
+
 <body>
-
-    <meta charset="utf-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-    <title>Basic Bootstrap Template</title>
-    <!-- Bootstrap CSS file -->
-    <link rel="stylesheet" href="js/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
-
 <title> Assignment Zero </title>
-<h2> NEW CONTACT </h2>
+
+<h2> Creating a new contact<h2>
 <form action= "create.php" method = "POST">
-	<label> full_name: <br>
-	<input type = 'text' name='full_name' placeholder="Mickey Rat"><br>
-	age: <br>
-	<input type = 'text' name='age' placeholder="18"><br>
-	phone_number: <br>
-	<input type="text" name='phone_number' placeholder="xxx-xxx-xxxx"><br>
-	email: <br>
-	<input type="text" name="email" placeholder= 'neal4@gmail.com' ><br>
-	</label> 
+	<div class="form-group">
+		<label> 
 
-<input type = 'submit' value="'submit">
+			<b>full_name:</b>
+		</label>
+		<input type = 'text' name='full_name' placeholder="Mickey Rat">
+	</div>
+
+	<div class="form-group">
+		<label> 
+
+			<b>age:<a>
+		</label>
+		<input type = 'text' name='age' placeholder="18">
+	</div>
+	<div class="form-group">
+		<label> 
+			<b>phone_number:<b>
+			</label>
+		<input type="text" name='phone_number' placeholder="xxx-xxx-xxxx">
+	</div>
+	<div class="form-group">
+		<label>
+			<b>email:<a> 
+			</label>
+		<input type="text" name="email" placeholder= 'neal4@gmail.com' >
+	</div>
+
+<input type = 'submit' value="submit">
 </form>
-<style > 
-
-	form label {font-weight:bold}
-
-</style>
-
+<style>
+	input[type=button], input[type=submit], input[type=reset] {
+  background-color: #4CAF50;
+  border: none;
+  color: white;
+  padding: 16px 32px;
+  text-decoration: none;
+  margin: 4px 2px;
+  cursor: pointer;
+}</style>
 
 </body>
 </html> 

@@ -1,96 +1,10 @@
 <!DOCTYPE html>
-<html>
-<head>
-  <meta charset="utf-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1">
-  <link rel="stylesheet" href="stylesheets/bootstrap.min.css">
-  <script src="js/jquery.min.js"></script>
-  <script src="js/bootstrap.min.js"></script>
-  <style>
-table {
-  border-collapse: collapse;
-  width: 100%;
-}
+<html lang="en">
+<!-- including the HEAD of the HTML via the header.php file bellow so that the bootstrap portion can be placed in future pages down the line.  -->
+<?php include ('header.php'); ?>
 
-th, td {
-  text-align: left;
-  padding: 8px;
-}
-
-tr:nth-child(even) {background-color: #C0C0C0;}
-
-}
-
-
-.btn {
-  border: 2px solid black;
-  background-color: white;
-  color: black;
-  padding: 14px 28px;
-  font-size: 16px;
-  cursor: pointer;
-
-}
-
-/* Green */
-.success {
-  border-color: #4CAF50;
-  color: green;
-}
-
-.success:hover {
-  background-color: #4CAF50;
-  color: white;
-}
-
-/* Blue */
-.info {
-  border-color: #2196F3;
-  color: dodgerblue
-}
-
-.info:hover {
-  background: #2196F3;
-  color: white;
-}
-
-/* Orange */
-.warning {
-  border-color: #ff9800;
-  color: orange;
-}
-
-.warning:hover {
-  background: #ff9800;
-  color: white;
-}
-
-/* Red */
-.danger {
-  border-color: #f44336;
-  color: red
-}
-
-.danger:hover {
-  background: #f44336;
-  color: white;
-}
-
-/* Gray */
-.default {
-  border-color: #e7e7e7;
-  color: black;
-}
-
-.default:hover {
-  background: #e7e7e7;
-}
-</style>
-
-</head>
 <body>
-
-
+<button type="button" class="btn btn-outline-primary"> <a href='http://localhost/contact_manager/new.php' > -add a new contact by clicking here- </a></button>
 
 <?php
 //Where we will obtaining all the fields we require will come from an established connection to the database of where we hold such records not publicluy available.
@@ -103,7 +17,8 @@ $result = mysqli_query($conn, $sql) or die ('Bad Query: $sql');
 //when the data is collected, we expect to do something with it! so again order is crucial! Generate the table with the desired params in mind, (you can't just go to the grocerries and not have no where to put your obtained goods!) so keep in mind that back end we have variables yes but front end would require a table! the table's main scope is to hold all tasks! so make space in the realm of HTML! (HTML is front end and will display / show).
 
 //note to self order matters! use caution before proceding & placing the returned data to the desired variable! The data with the following information should be seaminlessly on the screen as localhost/contact_manager/ is accessed.
-echo "<table class='table table-striped'>;
+echo "<table class=table-striped>
+<tr class='active'>
 <thead>
 <tr>
 <th> id </th>
@@ -113,8 +28,7 @@ echo "<table class='table table-striped'>;
 <th>Email </th>
 <th>Actions </th>
 </tr>
-</thead>
-<tbody>"; 
+</thead>"; 
 
 while ($row = mysqli_fetch_assoc ($result)) 
 {
@@ -126,17 +40,15 @@ $email = $row ['email'];
 // the above is important because like mentioned before the variables hold the returned data from $result. More specifically the $row information of the 
 //desired column of a contact. So now we have the variable+desired location that we want to focus our scope towards. We get to specify as well as have a purpose for such data point.
 
-
 echo "<tr>
 <td> $contact_id </td>
 <td>$full_name </td>
 <td>$age</td>
 <td>$phone_number</td>
 <td>$email</td>
-<td><button class='btn info'<a href='show.php?contact_id=$contact_id' >show </a> </button>
-<button class='btn success'<a href='edit.php?contact_id=$contact_id' >edit </a></button>
-<button class='btn danger'<a href='delete.php?contact_id=$contact_id' >delete </a></button>
-<button class='btn warning'<a href='http://localhost/contact_manager/new.php' >new </a></button></td>
+<td><button class='btn btn-outline-primary'><a href='show.php?contact_id=$contact_id' >show </a> </button>
+<button class='btn btn-outline-primary'><a href='edit.php?contact_id=$contact_id' >edit </a></button>
+<button class='btn btn-outline-primary'><a href='delete.php?contact_id=$contact_id' >delete </a></button>
 </tr>"; 
 }
 echo "</table>";
@@ -146,13 +58,10 @@ echo "</table>";
 
 ?> 
 
+
 </body>
+
 </html>
-
-
-
-
-
 
 
 

@@ -2,7 +2,7 @@
 <html lang="en"> <!-- Declared the language of my web page to assit search engines / browsers -->
 
 <!-- including the HEAD portion of the HTML in the header.php file below so that the included contents belonging to the bootstrap can be placed in future pages throughout the projet.  -->
-<?php include ('header.php'); include ('/Applications/XAMPP/xamppfiles/htdocs/contact_manager/db.php');?>
+<?php include ('header.php'); ?>
 
 <body>
 

@@ -1,7 +1,6 @@
 <html>
 <?php 
 
-include ('Applications/XAMPP/xamppfiles/htdocs/contact_manager/db.php');
 include ('header.php'); ?>
 
 <body>
@@ -14,7 +13,7 @@ $phone_number = $_POST ['phone_number'];
 $email = $_POST['email'];
 
 #Creating a connection
-include ("db.php");
+include ('/Applications/XAMPP/xamppfiles/htdocs/contact_manager/db.php');
 
 $sql = "INSERT INTO `contacts` (`full_name`, `age`, `phone_number`, `email`) VALUES ('$full_name', '$age', '$phone_number', '$email')";
 echo $sql."\n";

@@ -1,15 +1,14 @@
-<html>
 
-<?php include ('header.php'); ?>
+<?php 
+include ('header.php'); 
+?>
 <body>
 <?php 
 
+
 $contact_id = $_GET['contact_id'];
 
-
-include ('Applications/XAMPP/xamppfiles/htdocs/contact_manager/db.php');
-
-
+include ('/Applications/XAMPP/xamppfiles/htdocs/contact_manager/db.php');
 $sql = "SELECT * FROM `contacts` WHERE `id`= '$contact_id' limit 1" ;
 
 $result = mysqli_query($conn, $sql) or die ("Bad Query: $sql");
@@ -71,8 +70,6 @@ $conn->close();
          cursor: pointer;
          }
       </style>
-
-<html>
 
 
 

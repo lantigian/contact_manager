@@ -2,7 +2,7 @@
 
 $contact_id = $_GET['contact_id'];
 
-include('Applications/XAMPP/xamppfiles/htdocs/contact_manager/db.php');
+include ('/Applications/XAMPP/xamppfiles/htdocs/contact_manager/db.php');
 
 $sql = "DELETE FROM `contacts` WHERE `id`= '$contact_id' limit 1" ;
 

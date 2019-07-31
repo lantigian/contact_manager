@@ -1,11 +1,6 @@
-<!DOCTYPE html>
-<html>
-<head>
-
 <?php 
-include ('Applications/XAMPP/xamppfiles/htdocs/contact_manager/db.php');
-include ('header.php');
 
+include ('header.php');
  ?>
 
 <body>

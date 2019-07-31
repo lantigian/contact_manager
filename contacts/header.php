@@ -3,7 +3,6 @@
   <meta name="description" content="">
   <meta name="author" content="">
   <title>for all contacts</title>    
-
 <link rel="stylesheet" href="stylesheets/bootstrap_4.3/bootstrap.min.css">
 <link rel="stylesheet" href="stylesheets/bootstrap_4.3/bootstrap.css">
 <link rel="stylesheet" href="stylesheets/bootstrap_4.3/bootstrap-responsive.min.css">

@@ -1,6 +1,6 @@
 <?php 
 
-include ('header.php');
+include ('/Applications/XAMPP/xamppfiles/htdocs/contact_manager/header.php');
  ?>
 
 <body>

@@ -1,7 +1,7 @@
 <?php
 
 $contact_id = $_GET['contact_id'];
-include ('db.php');
+include ('Applications/XAMPP/xamppfiles/htdocs/contact_manager/db.php');
 
 
 

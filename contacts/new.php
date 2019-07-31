@@ -2,7 +2,11 @@
 <html>
 <head>
 
-<?php include ('header.php') ?>
+<?php 
+include ('Applications/XAMPP/xamppfiles/htdocs/contact_manager/db.php');
+include ('header.php');
+
+ ?>
 
 <body>
 <title> Assignment Zero </title>

@@ -2,7 +2,7 @@
 <html lang="en"> <!-- Declared the language of my web page to assit search engines / browsers -->
 
 <!-- including the HEAD portion of the HTML in the header.php file below so that the included contents belonging to the bootstrap can be placed in future pages throughout the projet.  -->
-<?php include ('header.php'); include ('db.php');?>
+<?php include ('header.php'); include ('/Applications/XAMPP/xamppfiles/htdocs/contact_manager/db.php');?>
 
 <body>
 
@@ -11,7 +11,7 @@
 
 <?php
 //To obtain all the fields we require an established connection to the database of where we hold such records not directly publicluy available.
-include ('db.php');
+include ('/Applications/XAMPP/xamppfiles/htdocs/contact_manager/db.php');
 //The index.php file will go through ALL the contacts, it will display the collected data.
 
 //Query the data, remember "Can you SELECT and return this information for me?""

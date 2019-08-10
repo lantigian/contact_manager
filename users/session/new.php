@@ -1,3 +1,6 @@
+<?php 
+session_start();
+?>
 <!DOCTYPE html>
 <html>
 
@@ -12,24 +15,7 @@ include ('/Applications/XAMPP/xamppfiles/htdocs/contact_manager/header.php');
 <div id="frm">
 <h2> Signing in<h2>
 <form action= "create.php" method = "POST">
-	<p>
-	<div class="form-group">
-		<label> 
-
-			<b>first_name:</b>
-		</label>
-		<input type = 'text' name='full_name' placeholder="Ian">
-	</p>
-	</div>
-
-<p>
-		<div class="form-group">
-		<label> 
-			<b>last_name:<a>
-		</label>
-		<input type = 'text' name='last_name' placeholder="Lantigua">
-	</div>
-</p>
+	
 <p>	
 	<div class="form-group">
 		<label> 

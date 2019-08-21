@@ -1,3 +1,7 @@
+<?php
+session_start();
+
+?>
 <!DOCTYPE html>
 <html lang="en"> <!-- Declared the language of my web page to assit search engines / browsers -->
 

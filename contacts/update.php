@@ -1,5 +1,10 @@
 <?php
 
+
+if (!isset($_POST['email']) && !isset ($_POST['password'])) {
+   header("Location: http://localhost/contact_manager/users/session/new.php?log_in_required");
+}
+
 $contact_id = $_GET['contact_id'];
 
 //if(isset(['edit'])

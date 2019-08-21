@@ -1,6 +1,4 @@
-<?php 
-session_start();
-?>
+
 <!DOCTYPE html>
 <html>
 
@@ -29,7 +27,7 @@ include ('/Applications/XAMPP/xamppfiles/htdocs/contact_manager/header.php');
 		<label>
 			<b>password:<a> 
 			</label>
-		<input type="text" name='password' placeholder= '****************************' >
+		<input type="password" class="form-control" name='password' placeholder= 'please type password' >
 	</div>
 </p>
 <input type = 'submit' id='btn' value="sign in">

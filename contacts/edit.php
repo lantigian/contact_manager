@@ -1,10 +1,19 @@
-<?php include ('/Applications/XAMPP/xamppfiles/htdocs/contact_manager/header.php'); 
+<?php 
+
+session_start();
+
+
+include ('/Applications/XAMPP/xamppfiles/htdocs/contact_manager/header.php'); 
 
 ?>
 
 <body>
 <?php
 
+//feature is log-in locked (modal feature is intended to most likely be implemented in the future to add direct alerts as a line of clear communication to a users screen as a pop-up window)
+if (!isset($_POST['email']) && !isset ($_POST['password'])) {
+   header("Location: http://localhost/contact_manager/users/session/new.php?log_in_required");
+} else {
 $contact_id = $_GET['contact_id'];
 include ('/Applications/XAMPP/xamppfiles/htdocs/contact_manager/db.php');
 $sql = "SELECT * FROM `contacts` WHERE `id`= '$contact_id' limit 1" ;
@@ -15,6 +24,7 @@ $full_name = $row['full_name'];
 $age = $row['age'];
 $phone_number = $row['phone_number'];
 $email = $row['email'];
+}
 }
 ?> 
 

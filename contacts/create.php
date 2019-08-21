@@ -1,7 +1,16 @@
+<?php
+session_start();
+if (!isset($_POST['email']) && !isset ($_POST['password'])) {
+   header("Location: http://localhost/contact_manager/users/session/new.php?log_in_required");
+}
+
+?>
 <html>
 <?php 
 
-include ('/Applications/XAMPP/xamppfiles/htdocs/contact_manager/header.php'); ?>
+
+include ('/Applications/XAMPP/xamppfiles/htdocs/contact_manager/header.php');
+ ?>
 
 <body>
 <?php

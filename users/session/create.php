@@ -1,7 +1,9 @@
 <?php
+//utilizing a header that includes the HTML portion which has the bootstrap 
 include ('/Applications/XAMPP/xamppfiles/htdocs/contact_manager/header.php'); ?>
 
 <?php
+//
 session_start();
 if (! empty($_POST) ) {
 	if (isset($_POST['email']) && isset ($_POST['password'])) {

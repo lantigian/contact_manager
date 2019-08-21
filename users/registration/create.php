@@ -17,7 +17,9 @@ $pass = mysqli_real_escape_string ($conn, $_POST['password']);
 
 
 $hashedPwd = password_hash($pass, PASSWORD_DEFAULT);
-$sql = "INSERT INTO `users` (`first_name`,`last_name`,`email`,`password`) VALUES ( '$first_name' , '$last_name' , '$email' , '$hashedPwd')";
+$passresult = $hashedPwd
+$pass = $passresult 
+$sql = "INSERT INTO `users` (`first_name`,`last_name`,`email`,`password`) VALUES ( '$first_name' , '$last_name' , '$email' , '$pass')";
 
 mysqli_query($conn, $sql); 
 header ("Location: http://localhost/contact_manager/users/session/new.php?sign_up=success");
